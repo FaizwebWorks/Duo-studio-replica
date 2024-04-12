@@ -1,0 +1,434 @@
+@font-face {
+    font-family: pp;
+    src: url(./assets/PPMori-Regular.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: pp;
+  color: #fff;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.cursor {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: fixed;
+  top: -50px;
+  left: -50px;
+  background-color: #edbfff;
+  z-index: 8;
+  transition: background-image ease 0.5s;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+}
+.marquee {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moving {
+  display: flex;
+  flex-direction: row;
+}
+
+.moving .moving-in {
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: anim;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.moving .moving-in h1 {
+  color: #000;
+  font-weight: 400;
+  display: inline-block;
+  font-size: 7vw;
+  margin-right: 30px;
+  text-transform: capitalize;
+}
+
+@keyframes anim {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.main {
+  background-color: #0f0d0d;
+  width: 100%;
+}
+
+.purple {
+  height: 100vh;
+  width: 100vw;
+  background-color: #edbfff;
+  position: fixed;
+  z-index: 100;
+  opacity: 0.98;
+  display: none;
+}
+
+.nav {
+  height: 4vw;
+  width: 100%;
+  padding: 0 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  mix-blend-mode: difference;
+  z-index: 9999;
+}
+
+.nav img {
+  height: 25px;
+}
+
+.nav .npart2 {
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+.nav .npart2 a {
+  font-size: 0.9vw;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.npart2 a:nth-child(1) {
+  border-bottom: 2px solid #fff;
+}
+
+.page1 {
+  height: 210vh;
+  width: 100%;
+  padding-top: 10vw;
+  border-bottom: 1px solid rgb(53, 53, 53);
+}
+
+.cir {
+  height: 15px;
+  width: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.page1 h1 {
+  font-size: 8vw;
+  font-weight: 400;
+  margin-left: 7vw;
+  margin-bottom: -10px;
+}
+
+.page1 h2 {
+  font-size: 8vw;
+  font-weight: 400;
+  margin-left: 25vw;
+}
+
+.page1 video {
+  width: 60%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, -0%);
+  margin-top: 6vw;
+}
+
+.page2 {
+  width: 100%;
+  height: 100vh;
+  padding: 5vw 0;
+  border-bottom: 1px solid rgb(53, 53, 53);
+  position: relative;
+}
+
+.page2 > h1 {
+  font-size: 7.5vw;
+  padding-left: 5vw;
+  font-weight: 400;
+  letter-spacing: -5px;
+  color: #141414;
+  margin-bottom: 4vw;
+}
+
+.page2-container {
+  height: 60%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10vw 0 6vw;
+}
+
+.page2-left {
+  width: 37%;
+}
+
+.page2-left h1 {
+  text-transform: uppercase;
+  font-size: 3.5vw;
+  font-weight: 300;
+  line-height: 0.9;
+  letter-spacing: -2px;
+  color: #141414;
+}
+
+.page2-right {
+  width: 23%;
+  margin-left: -2vw;
+}
+
+.page2-right p {
+  font-size: 1.3vw;
+  font-weight: 200;
+  color: #141414;
+  margin-bottom: 0.8vw;
+}
+
+.page2-right button {
+  width: 100%;
+  border-radius: 50px;
+  border: none;
+  background-color: #edbfff;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 0.8vw;
+  padding: 7px 0;
+  transition: all ease-in-out 0.2s;
+}
+
+.page2-right button:hover {
+  background-color: #141414;
+  color: #fff;
+}
+
+.page3 {
+  height: 120vh;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid rgb(53, 53, 53);
+}
+
+.page3 h1 {
+  font-size: 7vw;
+  color: #141414;
+  margin: 5vw;
+}
+
+.page3-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.page3-container img {
+  width: 45%;
+  margin-top: 8vw;
+}
+
+.page3-container video {
+  height: 25vw;
+  margin-right: 4.5vw;
+}
+
+.page4 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  padding: 12vw 0;
+}
+
+.elem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.txt-div {
+  height: 110px;
+  overflow: hidden;
+}
+
+.elem h1 {
+  font-size: 7vw;
+  transition: all ease 0.5s;
+}
+
+.elem img {
+  position: absolute;
+  width: 23vw;
+  opacity: 0;
+  transition: all ease-out 0.5s;
+  transform: translateY(10%) rotate(3deg);
+}
+
+#fimg {
+  left: 5%;
+  z-index: 9;
+}
+#simg {
+  right: 4%;
+  z-index: 9;
+}
+
+.elem:hover h1 {
+  transform: translateY(-100%);
+  color: #edbfff;
+}
+
+.elem:hover img {
+  opacity: 1;
+  transform: translateY(0) rotate(0);
+}
+
+.page5 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.page5 h2 {
+  font-size: 4vw;
+  text-transform: uppercase;
+  margin-left: 10vw;
+  margin-bottom: 1.5vw;
+  letter-spacing: -4px;
+  font-weight: 400;
+}
+
+.page5 h2 span {
+  color: #edbfff;
+}
+
+.box {
+  border-top: 1px solid white;
+  padding: 1.7vw 0;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box:nth-child(2) {
+  border-top: 2px solid white;
+}
+
+.box:nth-last-child(1) {
+  border-bottom: 1px solid white;
+}
+.box .right {
+  display: flex;
+  gap: 6vw;
+}
+
+.box h3 {
+  opacity: 0.3;
+  font-weight: 300;
+  letter-spacing: -0.3px;
+}
+
+.box h4 {
+  opacity: 0.3;
+  font-size: 0.9vw;
+  text-transform: capitalize;
+  font-weight: 100;
+}
+
+.footer {
+  height: 100vh;
+  width: 100%;
+  background-color: #edbfff;
+}
+
+.fmain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80vh;
+  width: 100%;
+  padding: 0 7.5vw;
+}
+
+.fmain h1,
+.button {
+  color: #0f0d0d;
+}
+
+.fmain h1 {
+  font-size: 8.5vw;
+  font-weight: 400;
+  letter-spacing: -4px;
+}
+
+.fmain .button {
+  background-color: #fff;
+  font-size: 0.8vw;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  height: 150px;
+  width: 150px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fmiddle p {
+  margin-left: 7.5vw;
+  color: #0f0d0d;
+  font-size: 1.2vw;
+}
+
+.fbottom {
+  display: flex;
+  margin-left: 7.5vw;
+  margin-top: 2.7vw;
+  gap: 5vw;
+}
+
+.fbottom h3,
+p {
+  color: #0f0d0d;
+  font-size: 1vw;
+}
+
+.fbottom h3 {
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin-bottom: 0.5vw;
+  font-weight: 500;
+}
+
+.fbottom p {
+  color: #590a78;
+  font-weight: 200;
+  font-size: 1.1vw;
+}
+.fbl a {
+  text-decoration: none;
+  color: #000;
+}
+
+.fbr a {
+  text-decoration: none;
+  color: #000;
+}
